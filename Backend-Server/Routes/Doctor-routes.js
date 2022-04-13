@@ -3,7 +3,7 @@ const router = express.Router();
 const doctorController = require('../Controllers/Doctor-controller');
 
 router.get("/", doctorController.getAllDoctor);
-router.post("/", doctorController.addDoctor);
+router.post("/addDoctor", doctorController.addDoctor);
 router.get("/:id", doctorController.getById)
 
 module.exports = router; 
