@@ -4,7 +4,7 @@ const getAllDoctor = async (req,res,next) =>{
     let doctor ;
     try {
         doctor = await Doctor.find();
-    } catch(errror){
+    } catch(err){
         console.log(err)
     }
     if(!doctor){
@@ -29,11 +29,11 @@ const getById = async (req,res,next) =>{
 }
 
 const addDoctor = async (req, res, next) => {
-    const{name, speciality, availability, cost} = req.body;
+    const{name, speciality, availability, cost, image} = req.body;
     let doctor;
     try{
         doctor = new Doctor({
-            name, speciality, availability, cost
+            name, speciality, availability, cost, image
         })
         await doctor.save();
     } catch(err){
