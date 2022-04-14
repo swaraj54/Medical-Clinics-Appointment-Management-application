@@ -23,7 +23,7 @@
     flex-direction:column;
     justify-content:center;
     margin-top: 30px;
-    background-color: rgb(226, 241, 206);
+    background-color: azure;
 }
 .card >img {
     width:100%;
@@ -46,4 +46,64 @@
     width:50%;
     margin:auto;
     text-align:center
+}
+
+.topp {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.topp > div {
+    width: 60%;
+    margin: auto;
+    height: 400px;
+}
+.topp > div:nth-child(1){
+    width: 30%;
+}
+.cardd{
+    width: 80%;
+    height:100%;
+    box-shadow: 5px 5px 10px #ccc ;
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background-color: azure;
+    margin: auto;
+}
+.cardd >img {
+    width:100%;
+    height:50%;
+}
+.cardd article{
+    padding: 5px;
+}
+.cardd h2,p,article{
+    margin-top: 1px;
+}
+.cardd h2 {
+    font-size:14px;
+}
+.cardd p{
+    padding:3px;
+}
+
+.card2 {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    background-color:azure;
+}
+.card2 div:first-child{
+    width: 30%;
+    margin: auto;
+    height: 100%;
+    background-color:blanchedalmond
+}
+.card2 div:nth-child(2) {
+    width: 60%;
+    margin: auto;
+    height: 100%;
 }

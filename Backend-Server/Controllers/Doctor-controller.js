@@ -40,7 +40,24 @@ const addDoctor = async (req, res, next) => {
         console.log(err);
     }
     if(!doctor){
-        return res.status(500).json({message:"Prodcut Not Added"});
+        return res.status(500).json({message:"Doctor Not Added"});
+    }
+    return res.status(201).json({doctor});
+}
+const addDate = async (req, res, next) => {
+    const id = req.params.id;
+    const{name, speciality, availability, cost, image, date, time} = req.body;
+    let doctor;
+    try{
+        doctor = await Doctor.findByIdAndUpdate(id,  {
+            name, speciality, availability, cost, image, date, time
+        })
+        await doctor.save();
+    } catch(err){
+        console.log(err);
+    }
+    if(!doctor){
+        return res.status(500).json({message:"Doctor Not Added"});
     }
     return res.status(201).json({doctor});
 }
@@ -49,3 +66,4 @@ const addDoctor = async (req, res, next) => {
 exports.getAllDoctor = getAllDoctor;
 exports.getById = getById;
 exports.addDoctor = addDoctor;
+exports.addDate = addDate;
