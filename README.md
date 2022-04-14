@@ -13,3 +13,6 @@
 
 # Appoitment History Page -
 <img src="https://user-images.githubusercontent.com/70018714/163316459-5ecbad76-27ad-4c83-be60-b18a45755294.png" />
+
+# Doctors Data -
+<img src="https://user-images.githubusercontent.com/70018714/163317229-ad946ea3-00b8-401d-8f14-dc91854b693c.png" />
