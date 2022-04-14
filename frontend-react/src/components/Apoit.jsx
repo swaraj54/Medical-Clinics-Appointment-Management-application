@@ -12,7 +12,8 @@ const Apoit = (props) => {
         <h3>Dr. {name}</h3>
         <article>Speciality : <b>{speciality}</b> </article>
         <h2>Chagres : <b>Rs.{cost}</b></h2>
-        <h3>Check All Apoitments Here</h3>
+        <h3>Check Below Apoitments</h3>
+        {(date && time) ? <h4>Appoitment Booked on {date} and time {time} </h4> : null}
     </div>
   )
 }

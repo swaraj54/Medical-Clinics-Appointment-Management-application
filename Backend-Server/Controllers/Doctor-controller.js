@@ -47,17 +47,20 @@ const addDoctor = async (req, res, next) => {
 const addDate = async (req, res, next) => {
     const id = req.params.id;
     const{name, speciality, availability, cost, image, date, time} = req.body;
+    // console.log(id)
+    // console.log(date,time)
     let doctor;
     try{
-        doctor = await Doctor.findByIdAndUpdate(id,  {
-            name, speciality, availability, cost, image, date, time
-        })
+        doctor = await Doctor.findByIdAndUpdate(id, {
+            date, time
+        } )
         await doctor.save();
+        // console.log(doctor)
     } catch(err){
         console.log(err);
     }
     if(!doctor){
-        return res.status(500).json({message:"Doctor Not Added"});
+        return res.status(500).json({message:"Doctor Not Updated"});
     }
     return res.status(201).json({doctor});
 }

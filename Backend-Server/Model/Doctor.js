@@ -7,7 +7,9 @@ const doctorSchema = new schema({
     speciality: {type: String, required: true},
     availability: [{type: Number, required: true}, {type: Number, required: true}],
     cost: {type: Number, required: true},
-    image: {type: String, required: true}
+    image: {type: String, required: true},
+    date: {type: String, required: false},
+    time: {type: String, required: false},
 });
 
 module.exports = mongoose.model("doctor", doctorSchema);

@@ -29,7 +29,7 @@ const DoctorBook = () => {
             cost:Number(cost),
             image:String(image),
             date: String(date.Date),
-            time:String(date.Time)
+            time:String( date.Time)
         }).then(res=> res.data);
     } 
     const handleSend = () => {
